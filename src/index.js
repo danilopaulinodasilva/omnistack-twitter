@@ -8,10 +8,7 @@ mongoose.connect("mongodb+srv://danilopaulinodasilva:KuuUw5A4Jo8ykMIb@cluster0.c
     useUnifiedTopology: true
 });
 
-app.get('/', (req,res) => {
-    return res.send("Hello world!")
-
-});
+app.use(require('./routes'));
 
 app.listen(3000, () => {
     console.log("Server started at port 3000");  
